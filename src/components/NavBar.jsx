@@ -18,7 +18,7 @@ const NavBar = (scrolled) => {
           <div className="flex items-center space-x-1 group cursor-pointer">
             <div>
               <img
-                src="/public/web-development.png"
+                src="/web-development.png"
                 alt="logo"
                 className="w-6 h-6 sm:w-8 sm:h-8 "
               />
