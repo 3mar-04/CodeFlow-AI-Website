@@ -2,18 +2,28 @@ import NavBar from './components/NavBar'
 import Hero from './components/Hero'
 import Features from './components/Features'
 import Pricing from './components/Pricing'
-import Help from './components/Help'
 import Testimonials from './components/Testimonials'
 import Footer from './components/Footer'
+import { useEffect, useState } from 'react'
 
 function App() {
+
+  const [scrolled, setScrolled] = useState(false);
+    function handleScroll(){
+      setScrolled(window.scrollY >50);
+    }
+
+  useEffect(() => {
+    window.addEventListener("scroll" , handleScroll);
+    return()=>    window.removeEventListener("scroll" , handleScroll);
+
+  }, []);
   return (
     <div className="min-h-screen bg-slate-950  text-white overflow-hidden">
       <NavBar/>
       <Hero/>
       <Features />
       <Pricing/>
-      <Help/>
       <Testimonials/>
       <Footer/>
     </div>

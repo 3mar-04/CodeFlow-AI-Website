@@ -126,7 +126,7 @@ const Hero = () => {
                   {/* Code Content */}
                   <div className=" relative overflow-hidden flex-grow">
                     <SyntaxHighlighter
-                      language="javascrpit"
+                      language="javascript"
                       style={nightOwl}
                       customStyle={{
                         margin: 0,
@@ -135,6 +135,8 @@ const Hero = () => {
                         lineHeight: "1.4",
                         height: "100%",
                         border: " 1px solid #3c3c3c",
+                        wordWrap: "break-word",
+                        whiteSpace :"pre-wrap"
                       }}
                     >
                       {codeExamples[activeTab]}
